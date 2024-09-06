@@ -14,6 +14,7 @@ pipeline {
             steps{
                 script{
                     def dockerHome = tool 'docker'
+                    sh 'sudo usermod -a -G docker jenkins'
                     sh 'docker --version'
                     sh 'docker build -t keerthins123/devops-integration .'
                 }
