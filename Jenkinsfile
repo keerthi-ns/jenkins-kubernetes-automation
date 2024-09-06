@@ -13,6 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
+                    sh 'docker --version'
                     sh 'docker build -t keerthins123/devops-integration .'
                 }
             }
