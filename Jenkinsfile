@@ -14,7 +14,6 @@ pipeline {
             steps{
                 script{
                     def dockerHome = tool 'docker'
-                    env.PATH = "${dockerHome}/bin:${env.PATH}
                     sh 'docker --version'
                     sh 'docker build -t keerthins123/devops-integration .'
                 }
