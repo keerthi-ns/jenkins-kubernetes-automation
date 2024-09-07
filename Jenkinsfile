@@ -1,8 +1,10 @@
 pipeline {
     agent any
+    environment {
+        DOCKER_HOST = "tcp://host.docker.internal:2375"  
+    }
     tools{
         maven 'maven_3_5_0'
-        dockerTool 'docker'
     }
     stages{
         stage('Build Maven'){
